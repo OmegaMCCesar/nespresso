@@ -16,6 +16,8 @@ export type UserData = {
   supervisor?: string;
   supervisorId?: string;
   metaVentas?: number;
+  racha?:number;
+  tema?:string;
 };
 
 export function useAuth() {
