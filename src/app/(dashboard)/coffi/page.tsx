@@ -102,8 +102,8 @@ export default function CoffiDashboard() {
   };
 
   const getEstadoVuelo = () => {
-    const limite = new Date(); limite.setHours(10, 0, 0, 0);
-    const tolerancia = new Date(); tolerancia.setHours(10, 10, 0, 0);
+    const limite = new Date(); limite.setHours(13, 0, 0, 0);
+    const tolerancia = new Date(); tolerancia.setHours(13, 10, 0, 0);
     if (horaActual < new Date(limite.getTime() - 15 * 60000)) return { texto: "Vuelo a tiempo. Sala de espera abierta.", color: "text-green-600", bg: "bg-green-100", aTiempo: true };
     if (horaActual <= limite) return { texto: "Abordaje en curso. Estás a excelente tiempo.", color: "text-blue-600", bg: "bg-blue-100", aTiempo: true };
     if (horaActual <= tolerancia) {
